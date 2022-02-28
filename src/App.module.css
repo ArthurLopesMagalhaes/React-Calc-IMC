@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: 0;
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.Container {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  gap: 80px;
+}
+
+.leftSide,
+.rightSide {
+  flex: 1;
+}
+
+.leftSide h1 {
+  font-size: 40px;
+  color: #3a4b5c;
+}
+
+.leftSide p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #6a7d8b;
+}
+
+.leftSide input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid rgba(150, 163, 171, 0.5);
+  padding: 10px 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.leftSide input:disabled {
+  opacity: 0.5;
+}
+
+.leftSide button {
+  background-color: #227c9d;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 15px 0;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: all ease 0.2s;
+}
+
+.leftSide button:hover {
+  opacity: 0.8;
+}
+
+.leftSide button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rightSide {
+  display: flex;
+}
+
+.rightSide .grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.rightBig {
+  flex: 1;
+  display: flex;
+}
+
+.rightArrow {
+  position: absolute;
+  background-color: #227c9d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -35px;
+  margin-top: 180px;
+  transition: all ease 0.3s;
+}
+
+.rightArrow:hover {
+  background-color: #3a4b5c;
+}
+
+@media (max-width: 930px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .Container {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .rightArrow {
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .rightSide .grid {
+    grid-template-columns: 1fr;
+  }
+}
